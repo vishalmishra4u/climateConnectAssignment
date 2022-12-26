@@ -23,8 +23,9 @@ describe('/POST getRiskProfile', () => {
                 res.should.have.status(200);
                 res.body.should.be.a('object');
                 res.body.should.have.property('auto');
-                // res.body.errors.should.have.property('pages');
-                // res.body.errors.pages.should.have.property('kind').eql('required');
+                res.body.should.have.property('disability');
+                res.body.should.have.property('home');
+                res.body.should.have.property('life');
                 done();
             });
     });
