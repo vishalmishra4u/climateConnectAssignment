@@ -10,13 +10,13 @@ function getUserRiskProfile(req, res){
         "life": ''
     };
 
-    let data = req.query;
-    let age = JSON.parse(data.age),
-        riskQuestions = JSON.parse(data.riskQuestions),
-        income = JSON.parse(data.income),
-        house = JSON.parse(data.house),
-        dependents = JSON.parse(data.dependents),
-        vehicle = JSON.parse(data.vehicle);
+    let data = req.body;
+    let age = data.age,
+        riskQuestions = data.riskQuestions,
+        income = data.income,
+        house = data.house,
+        dependents = data.dependents,
+        vehicle = data.vehicle;
 
     let baseScoreSum = riskQuestions.reduce(function (previousValue, currentValue) {
         return previousValue + currentValue;
