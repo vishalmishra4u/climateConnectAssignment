@@ -5,6 +5,7 @@
 #### 2. npm install
 #### 3. npm run start
 
+--------------------------------------------------------------------------------------------------------
 
 ### Main Decisions regarding project
 #### 1. Using express as its light and good for Node 
