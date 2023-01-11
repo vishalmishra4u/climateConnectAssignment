@@ -17,6 +17,7 @@
     "test": "mocha test.js"
   },
   "devDependencies": {
+    "artillery": "^2.0.0-27",
     "mocha": "^10.2.0"
   }
 }

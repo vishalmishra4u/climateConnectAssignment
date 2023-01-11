@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:8000"
+  phases:
+   - duration: 30
+     arrivalRate: 5
+
+scenarios:
+  -  name: "Get the API response"
+     flow:
+        - post:
+            url: "/api/getRiskProfile  "
+            json:
+              "age": 72
+              "dependents": 0
+              "income": 100000
+              "maritalStatus": "married"
+              "vehicle": {"year": 2018}
+              "house": {"ownership_status": "owned"}
+              "riskQuestions": [1,0,0]
