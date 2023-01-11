@@ -12,8 +12,8 @@ const routes = require('./routes.js')
 const router = express.Router();
 
 const limiter = rateLimit({
-   max: 100,
-   windowMs: 60 * 60 * 1000,
+   max: process.env.MAX_REQUESTS,
+   windowMs: process.env.REQUEST_TIME,
    message: "Too many request from this IP"
 });
 
@@ -26,7 +26,7 @@ app.use('/api',router);
 
 routes(router);
 
-const PORT = 8000;
+const PORT = process.env.PORT;;
 
 app.listen(PORT, () => {
    console.log(`App is active at ${PORT}!`); 
